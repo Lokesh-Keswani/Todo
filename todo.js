@@ -46,7 +46,7 @@ function editButton1(e) {
     e.stopPropagation();
 
     const listItem = e.target.parentElement;
-    const originalText = listItem.textContent.trim();
+    const originalText = listItem.textContent.trim().slice(0, -2);
     const inputElement = document.createElement('input');
     inputElement.id = 'edit2';
     inputElement.type = "text";
